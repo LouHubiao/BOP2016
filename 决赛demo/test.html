@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript">
+        maps = JSON.parse('{"count":5,"entities":[{"id":"Capture2","time":"2016/3/7","location":"微软大厦","tag":["work","微软大厦","我","章寒雨"]},{"id":"Capture4","time":"2016/3/9","location":"微软大厦","tag":["work","微软大厦","我","章寒雨","潘锦博"]},{"id":"Capture5","time":"2016/3/12","location":"微软大厦","tag":["work","微软大厦","我","章寒雨"]},{"id":"Capture6","time":"2016/5/19","location":"长城","tag":["trip","长城","潘锦博"]},{"id":"Capture7","time":"2016/5/18","location":"长城","tag":["trip","长城","潘锦博","章寒雨"]}]}');
+        var mapsStr = JSON.stringify(maps);
+		$.ajax({
+            type: "POST",
+            dataType: "jsonp",
+            url: "https://bop2016test.chinacloudapp.cn/services.asmx/store",
+            data: 'json='+mapsStr,
+        });
+	</script>
+</head>
+<body>
+	
+</body>
+</html>
